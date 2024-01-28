@@ -1,0 +1,126 @@
+QBox stuff
+	['still'] 			 			     = {['name'] = 'still', 						['label'] = 'Still Kit', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'stickynote.png', 				['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+	['plastic_barrel'] 			 		 = {['name'] = 'plastic_barrel', 						['label'] = 'Plastic Barrel', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+	['mash'] 			 			 	 = {['name'] = 'mash', 						['label'] = 'Mash Barrel', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = true, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+	['masonjars'] 			 			 = {['name'] = 'masonjars', 						['label'] = 'Box of Jars', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+	['moonshine'] 			 			 = {['name'] = 'moonshine', 						['label'] = 'Moonshine', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+
+	['corn'] 			 			 = {['name'] = 'corn', 						['label'] = 'Corn', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = false, 		['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = ''},
+	['sugar'] 			 			 = {['name'] = 'sugar', 						['label'] = 'Sugar', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = false, 		['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = ''},
+	['yeast'] 			 			 = {['name'] = 'yeast', 						['label'] = 'Yeast', 						['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 				['unique'] = false, 		['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = ''},
+
+OxInv settings
+    ["still"] = {
+        label = "Still Kit",
+        weight = 1000,
+        stack = true,
+        close = true,
+        description = "",
+        client = {
+            image = "stickynote.png",
+            usetime = 2500,
+            event = "moss:client:useStill"
+        }
+    },
+
+    ["plastic_barrel"] = {
+        label = "Plastic Barrel",
+        weight = 1000,
+        stack = true,
+        close = true,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+            usetime = 2500,
+            event = "moss:client:useBarrel"
+        },
+    },
+
+    ["yeast"] = {
+        label = "Yeast",
+        weight = 1000,
+        stack = true,
+        close = false,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+        }
+    },
+
+    ["corn"] = {
+        label = "Corn",
+        weight = 1000,
+        stack = true,
+        close = false,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+        }
+    },
+
+    ["mash"] = {
+        label = "Mash Barrel",
+        weight = 1000,
+        stack = false,
+        close = true,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+        }
+    },
+
+    ["sugar"] = {
+        label = "Sugar",
+        weight = 1000,
+        stack = true,
+        close = false,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+        }
+    },
+
+    ["masonjars"] = {
+        label = "Box of Jars",
+        weight = 1000,
+        stack = true,
+        close = true,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+        }
+    },
+
+    ["moonshine"] = {
+        label = "Moonshine",
+        weight = 1000,
+        stack = true,
+        close = true,
+        description = "",
+        client = {
+            image = "printerdocument.png",
+        }
+    },
+
+
+Shop config
+Moonshine = {
+		name = 'Supply Store',
+		inventory = {
+			{ name='still', price= 1000 },
+			{ name='plastic_barrel', price= 20 },
+			{ name='masonjars', price= 10 },
+
+			{ name='corn', price= 1 },
+			{ name='sugar', price= 1 },
+			{ name='yeast', price= 1 },
+			{ name='water', price= 1 },
+		},
+		targets = {
+			{
+				ped = `mp_m_shopkeep_01`,
+				loc = vec3(958.02, 3614.99, 31.68),
+				heading = 352.37,
+			}
+		}
+	}

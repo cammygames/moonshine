@@ -1,0 +1,27 @@
+{
+  "name": "traffic_lights",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clearbuild && npm run typecheck && node build/build-bundle.js",
+    "clearbuild": "rimraf ./dist",
+    "typecheck": "tsc --noEmit -p client/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
+    "watch": "npm run clearbuild && cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
+  },
+  "devDependencies": {
+    "@citizenfx/client": "^2.0.7345-1",
+    "@citizenfx/server": "^2.0.7345-1",
+    "@types/node": "16.9.1",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.19.3",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2"
+  },
+  "resolutions": {
+    "path-scurry": "1.6.3",
+    "lru-cache": "7.18.0"
+  },
+  "dependencies": {
+    "@overextended/ox_lib": "^3.16.2"
+  }
+}
